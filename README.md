@@ -2,7 +2,7 @@
 
 ## 1. Clone dulu repo saya
 ```
-https://github.com/riskiputraalamzah/pabw-client-server-cars-project.git
+git clone https://github.com/riskiputraalamzah/pabw-client-server-cars-project.git
 ```
 ## 2. Buka folder yang telah di clone, lalu masuk di folder client & server(buka di terminal)
 jalankan perintah berikut 
