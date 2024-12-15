@@ -25,6 +25,10 @@ def create_tables():
         database.create_tables([TBCars])
 
 
+@app.route('/', methods=['GET'])
+def index():
+    return "API berhasil di-hit!"
+    
 @app.route('/api/cars', methods=['GET'])
 def get_cars():
     cars = list(TBCars.select().dicts())

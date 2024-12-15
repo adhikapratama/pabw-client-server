@@ -3,9 +3,9 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-12 text-center">
-        <h1>{{ appType }} | Car Project</h1>
+        <h1 class="display-4 text-primary">{{ appType }} | Car Project</h1>
         <h3 class="mt-3">
-          <span class="badge badge-primary">Demo:</span>
+          <span class="badge badge-primary">Demonya</span>
           <a href="{{ url_for('createcar') }}" class="btn btn-link">Create</a>
           <a href="{{ url_for('readcar') }}" class="btn btn-link">Read</a>
           <a href="{{ url_for('updatecar') }}" class="btn btn-link">Update</a>
@@ -20,14 +20,16 @@
 
     <div class="row mt-5">
       <div class="col-md-12 text-center">
-        <div class="card">
+        <div class="card shadow-lg rounded">
           <div class="card-body">
-            <h4 class="card-title">Welcome to the Car Management System</h4>
-            <p class="card-text">
+            <h4 class="card-title text-primary">
+              Welcome to the Car Management System
+            </h4>
+            <p class="card-text text-muted">
               Manage your car data efficiently with our easy-to-use platform.
               You can create, read, update, and delete car records as needed.
             </p>
-            <a href="{{ url_for('createcar') }}" class="btn btn-primary"
+            <a href="{{ url_for('createcar') }}" class="btn btn-primary btn-lg"
               >Get Started</a
             >
           </div>
@@ -35,51 +37,138 @@
       </div>
     </div>
 
-    <!-- Informasi Identitas -->
-    <div class="row mt-5">
-      <div class="col-md-12 text-center">
-        <div class="card">
-          <div class="card-body">
-            <h4 class="card-title">Modified By</h4>
-            <p class="card-text">
-              Nama: <strong>Riski Putra Alamzah</strong><br />
-              NIM: <strong>221080200100</strong>
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
+    <!-- Custom Styles -->
+    <style>
+      /* General Styles */
+      body {
+        background: linear-gradient(to right, #e2eafc, #d7e4f1);
+        font-family: "Poppins", sans-serif;
+        color: #343a40;
+        padding-top: 50px;
+      }
+
+      .container {
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 0 15px;
+      }
+
+      /* Heading Styles */
+      h1 {
+        font-size: 3.2rem;
+        font-weight: 700;
+        color: #0056b3;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .display-4 {
+        font-size: 3rem;
+      }
+
+      h3 {
+        font-size: 1.25rem;
+        color: #6c757d;
+      }
+
+      /* Button Styles */
+      .btn-link {
+        font-weight: normal;
+        color: #007bff;
+        text-decoration: none;
+        transition: all 0.3s ease-in-out;
+      }
+
+      .btn-link:hover {
+        text-decoration: underline;
+        color: #0056b3;
+      }
+
+      .btn-primary {
+        background: linear-gradient(90deg, #007bff, #0056b3);
+        color: white;
+        font-weight: bold;
+        padding: 12px 25px;
+        border-radius: 5px;
+        border: none;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease-in-out;
+      }
+
+      .btn-primary:hover {
+        background: linear-gradient(90deg, #0056b3, #003366);
+        transform: translateY(-2px);
+      }
+
+      .btn-primary:active {
+        background: linear-gradient(90deg, #003366, #0056b3);
+        transform: translateY(0);
+      }
+
+      /* Card Styles */
+      .card {
+        border-radius: 10px;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        margin-bottom: 3rem;
+        transition: all 0.3s ease-in-out;
+      }
+
+      .card:hover {
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+      }
+
+      .card-header {
+        background-color: #0056b3;
+        color: white;
+        font-weight: bold;
+        padding: 15px;
+        border-radius: 10px 10px 0 0;
+      }
+
+      .card-body {
+        padding: 2rem;
+        background-color: white;
+        border-radius: 0 0 10px 10px;
+        text-align: center;
+      }
+
+      .card-body .card-title {
+        font-size: 1.75rem;
+        font-weight: bold;
+        color: #007bff;
+        margin-bottom: 1.5rem;
+      }
+
+      .card-body .card-text {
+        font-size: 1rem;
+        color: #6c757d;
+        margin-bottom: 1.5rem;
+      }
+
+      /* Badge Styles */
+      .badge-primary {
+        background-color: #007bff;
+        font-size: 1.1rem;
+        font-weight: 600;
+        padding: 8px 15px;
+        border-radius: 25px;
+      }
+
+      /* Responsive Layout Adjustments */
+      @media (max-width: 767px) {
+        h1 {
+          font-size: 2.5rem;
+        }
+
+        .btn-primary {
+          padding: 10px 20px;
+        }
+
+        .card-body {
+          padding: 1.5rem;
+        }
+      }
+    </style>
   </div>
-
-  <style>
-    body {
-      background-color: #f8f9fa;
-    }
-    h1 {
-      color: #007bff;
-    }
-    .btn-link {
-      margin: 0 10px;
-      color: #007bff;
-      text-decoration: none;
-      transition: color 0.3s;
-    }
-    .btn-link:hover {
-      color: #0056b3;
-    }
-    .card {
-      margin: 20px auto;
-      max-width: 600px;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    }
-    .card-body {
-      padding: 20px;
-    }
-    .badge {
-      margin-right: 10px;
-    }
-  </style>
-
-  {% include 'footer.html' %}
 </body>
